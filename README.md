@@ -66,7 +66,7 @@ Point Cloud Representation of the Chair.
 <img src="chair_point_cloud.JPG" alt="point cloud">
 
 Chair Point Cloud after augumentation and addition of Noise.
-<img src="chairWithNoise" alt="chair Point Cloud">
+<img src="chairWithNoise.JPG" alt="chair Point Cloud">
 
 You can download the dataset by following [this link](https://drive.google.com/open?id=12Mv19pQ84VO8Av50hUXTixSxd5NDjeEB)
 
