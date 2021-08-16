@@ -73,6 +73,9 @@ You can download the dataset by following [this link](https://drive.google.com/o
 ## Classification Results
 
 <img src="result.JPG" alt="pointnet" /> 
+A confusion matrix is a technique for summarizing the performance of a classification algorithm. Classification accuracy alone can be misleading if you have an unequal number of observations in each class or if you have more than two classes in your dataset.
+
+After completion of training of PointNet we get class wise accuracy as given below.  
 
 | Class (Accuracy) | Overall | Bathtub | Bed| Chair|Desk|Dresser|Monitor|Night stand|Sofa|Table|Toilet|
 | :---: |:---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -90,7 +93,18 @@ Pretrained model is available [here](https://drive.google.com/open?id=1nDG0maaqo
   pip install -r requirements.txt
   ```
 
-## Usage
+## Segamentation Usage
 Segmentation part of the project is still in development. We can generate similar segmentation results after PointNet Segmentation.
 
 <img src="airplane.gif" alt="matching points" width="400"/> 
+
+## Limitations
+
+PointNet has a big limitation: it cannot capture local structure induced by the metric space points live in, therefore making it unlikely to learn fine grained patterns or to understand complex scenes. This is due to the max pooling operation which takes the full cloud as input to produce a global feature.
+
+PointNet does not really tackle the problem related to the desertion of shape.
+
+## Better Approch PointNet++
+
+PointNet++ introduce a hierarchical neural network that applies PointNet recursively on a nested partitioning of the input point set. By exploiting metric space distances, our network is able to learn local features with increasing contextual scales. With further observation that point sets are usually sampled with varying densities, which results in greatly decreased performance for networks trained on uniform densities, we propose novel set learning layers to adaptively combine features from multiple scales. Experiments show that our network called PointNet++ is able to learn deep point set features efficiently and robustly. In particular, results significantly better than state-of-the-art have been obtained on challenging benchmarks of 3D point clouds.
+
