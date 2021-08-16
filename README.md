@@ -35,6 +35,10 @@ Key points of the implementation are explained in details in [this](https://towa
 ## PointNet Architecture
 <img src="Architecture.JPG" alt="pointnet" /> 
 
+The classification network takes n points as input, applies input and feature transformations, and then
+aggregates point features by max pooling. The output is classification scores for k classes. The segmentation network is an extension to the
+classification net.
+
 ## Working
 The classification network takes N points with its 3D coordinates as input.
 
@@ -57,6 +61,12 @@ This code implements object classification on [ModelNet10](https://modelnet.cs.p
 As in the original paper, we sample 1024 points on objects surfaces depending on the area of the current face. Then we normalize the object to a unit sphere and add Gaussian noise. This is an example of input to the neural network that represents a chair:
 
 <img src="chair.gif" alt="matching points" width="400"/> 
+
+Point Cloud Representation of the Chair.
+<img src="chair_point_cloud.JPG" alt="point cloud">
+
+Chair Point Cloud after augumentation and addition of Noise.
+<img src="chairWithNoise" alt="chair Point Cloud">
 
 You can download the dataset by following [this link](https://drive.google.com/open?id=12Mv19pQ84VO8Av50hUXTixSxd5NDjeEB)
 
