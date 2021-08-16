@@ -93,7 +93,7 @@ Pretrained model is available [here](https://drive.google.com/open?id=1nDG0maaqo
   pip install -r requirements.txt
   ```
 
-## Segamentation Usage
+## Segamentation
 Segmentation part of the project is still in development. We can generate similar segmentation results after PointNet Segmentation.
 
 <img src="airplane.gif" alt="matching points" width="400"/> 
