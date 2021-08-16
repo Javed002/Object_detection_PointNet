@@ -60,7 +60,9 @@ As in the original paper, we sample 1024 points on objects surfaces depending on
 
 You can download the dataset by following [this link](https://drive.google.com/open?id=12Mv19pQ84VO8Av50hUXTixSxd5NDjeEB)
 
-## Classification performance
+## Classification Results
+
+<img src="result.JPG" alt="pointnet" /> 
 
 | Class (Accuracy) | Overall | Bathtub | Bed| Chair|Desk|Dresser|Monitor|Night stand|Sofa|Table|Toilet|
 | :---: |:---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -69,7 +71,7 @@ You can download the dataset by following [this link](https://drive.google.com/o
 Pretrained model is available [here](https://drive.google.com/open?id=1nDG0maaqoTkRkVsOLtUAR9X3kn__LMSL)
 
 ## Usage
-* The first and the best option is to run the notebook with comments and visualizations `/nbs/PointNetClass.ipynb` in Google Colab.
+* The first and the best option is to run the notebook with comments and visualizations `PointNetClass.ipynb` in Google Colab.
 * The second option is to clone the repository on a local machine and run a model with default parameters:
   If for some reason it doesn't work, you can install the requirements before running `python train.py`:
   ```bash
@@ -79,6 +81,6 @@ Pretrained model is available [here](https://drive.google.com/open?id=1nDG0maaqo
   ```
 
 ## Usage
-This part of the project is still in development. However, you already can run the notebook `/nbs/PointNetSeg.ipynb` in Colab.
+Segmentation part of the project is still in development. We can generate similar segmentation results after PointNet Segmentation.
 
 <img src="airplane.gif" alt="matching points" width="400"/> 
